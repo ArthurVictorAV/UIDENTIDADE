@@ -1,2 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #0a0e14;
+  --color-surface: #10151f;
+  --color-surface-hover: #161c29;
+  --color-border: #1e2633;
+
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-accent: #22d3ee;
+
+  --color-text: #e2e8f0;
+  --color-text-muted: #64748b;
+
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+}
