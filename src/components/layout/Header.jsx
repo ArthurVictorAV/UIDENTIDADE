@@ -38,11 +38,13 @@ export default function Header({ cartCount = 0 }) {
             to="/"
             className="group flex items-center gap-2 text-xl font-bold tracking-tight"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-amber-400/40 text-amber-400 text-xs font-serif transition-transform duration-300 group-hover:rotate-12">
-              IU
-            </span>
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-16 w-16  object-cover transition-transform duration-300 group-hover:rotate-12"
+            />
             <span className="text-white">
-              Identidade
+              Camiseta
               <span className="text-amber-400">Acadêmica</span>
             </span>
           </Link>
