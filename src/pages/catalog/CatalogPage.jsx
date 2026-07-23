@@ -2,22 +2,24 @@ import { useEffect, useState } from "react";
 import { getProdutos } from "../../services/productsServices";
 
 export default function Catalogo() {
-  const [produtos, setProdutos] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const [produtos, setProdutos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    getProdutos()
-      .then(setProdutos)
-      .finally(() => setLoading(false));
-  }, []);
+    useEffect(() => {
+        getProdutos()
+            .then(setProdutos)
+            .finally(() => setLoading(false));
+    }, []);
 
-  if (loading) return <p>Carregando produtos...</p>;
+    if (loading) return <p>Carregando produtos...</p>;
 
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-      {produtos.map((produto) => (
-        <div key={produto.id}>{produto.nome}</div>
-      ))}
-    </div>
-  );
+    return (
+        <div className="columns-2 gap-4 sm:columns-3 sm:gap-8 ...">
+            {produtos.map((produto) => (
+                <div>
+                    <div key={produto.id}>{produto.nome}</div>
+                </div>
+            ))}
+        </div>
+    );
 }
